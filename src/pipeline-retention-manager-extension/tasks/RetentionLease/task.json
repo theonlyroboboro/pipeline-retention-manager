@@ -11,7 +11,7 @@
   "version": {
     "Major": 1,
     "Minor": 0,
-    "Patch": 0
+    "Patch": 4
   },
   "instanceNameFormat": "Create Retention Lease: $(daysValid) days",
   "inputs": [
@@ -26,9 +26,8 @@
   ],
   "demands": [],
   "execution": {
-    "PowerShell3": {
-      "target": "run.ps1",
-      "argumentFormat": "-DaysValid $(daysValid)"
+    "Node20_1": {
+      "target": "index.js"
     }
   },
   "platforms": {
