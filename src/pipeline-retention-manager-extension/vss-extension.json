@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "id": "pipeline-retention-manager",
+  "name": "Pipeline Retention Manager",
+  "version": "0.0.1",
+  "publisher": "Heijdendevelopment",
+  "description": "Azure DevOps extension to create retention leases for pipeline runs.",
+  "categories": ["Azure Pipelines"],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "icons": {
+    "default": "icon.png"
+  },
+  "files": [
+    {
+      "path": "tasks"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "retention-lease-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": ["ms.vss-distributed-task.tasks"],
+      "properties": {
+        "name": "tasks/RetentionLease"
+      }
+    }
+  ]
+}

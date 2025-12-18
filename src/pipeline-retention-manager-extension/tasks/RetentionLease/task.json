@@ -1,0 +1,39 @@
+{
+  "id": "d2b8a5d5-8c3a-4f1e-b6b0-123456789abc",
+  "name": "RetentionLease",
+  "friendlyName": "Create Retention Lease",
+  "description": "Creates a retention lease for the current build in Azure DevOps",
+  "author": "Rob van der Heijden",
+  "helpMarkDown": "This task allows you to create a retention lease for a build or pipeline run.",
+  "category": "Utility",
+  "visibility": ["Build", "Release"],
+  "runsOn": ["Agent"],
+  "version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 0
+  },
+  "instanceNameFormat": "Create Retention Lease: $(daysValid) days",
+  "inputs": [
+    {
+      "name": "daysValid",
+      "type": "string",
+      "label": "Days Valid",
+      "defaultValue": "365",
+      "required": true,
+      "helpMarkDown": "Number of days the retention lease will be valid"
+    }
+  ],
+  "demands": [],
+  "execution": {
+    "PowerShell3": {
+      "target": "run.ps1",
+      "argumentFormat": "-DaysValid $(daysValid)"
+    }
+  },
+  "platforms": {
+    "windows": "any",
+    "linux": "any",
+    "osx": "any"
+  }
+}
