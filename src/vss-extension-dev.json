@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "pipeline-retention-manager-dev",
   "name": "Pipeline Retention Manager (Dev)",
-  "version": "0.0.10",
+  "version": "1.0.0",
   "publisher": "Heijdendevelopment",
   "description": "Azure DevOps extension to create retention leases for pipeline runs.",
   "categories": ["Azure Pipelines"],
