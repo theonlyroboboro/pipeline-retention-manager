@@ -28,7 +28,7 @@ jobs:
 
       - name: Package extension
         working-directory: src
-        run: tfx extension create --manifest-globs vss-extension.json
+        run: tfx extension create --manifest-globs vss-extension-dev.json
 
       - name: Upload VSIX artifact
         uses: actions/upload-artifact@v4
